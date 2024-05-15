@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+}
+
+div#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 10px 200px 0px 200px;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+.button-image {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+}
