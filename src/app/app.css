@@ -1,0 +1,18 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    margin-bottom: 16px;
+    align-items: baseline;
+    height: 58px;
+}
+
+.logo {
+    width: 156px;
+    height: 24px;
+}
+
+.add-button-container {
+    width: 102px;
+    height: 34px;
+}
