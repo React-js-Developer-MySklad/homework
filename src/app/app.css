@@ -1,0 +1,103 @@
+.root {
+    width: 85%;
+    margin: 0 auto;
+}
+
+@media(max-width: 600px) {
+    .root {
+        width: 100%;
+        margin: 0;
+    }
+
+    .px-6 {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.buttons-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 15px;
+}
+
+.btn-blue {
+    background-color: rgb(26, 86, 219);
+    background-image: none;
+    border-bottom-color: rgb(229, 231, 235);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    cursor:  pointer;
+    display: block;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.btn-add-icon {
+    background: url('document-add.png') no-repeat center / contain;
+    border: none;
+    padding: 8px;
+    margin-right: 5px;
+}
+
+.transactions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.transactions {
+    color: #6B7280;
+}
+
+.transactions .table-header {
+    text-transform: uppercase;
+    background-color: #F9FAFB;
+    font-weight: 500;
+}
+
+.transactions div {
+    border-top: 1px solid #E5E7EB;
+}
+
+.transactions .transaction-amount, .transactions .transaction-name {
+    color: #111928;
+    font-weight: 600;
+}
+
+.transactions strong {
+    font-weight: 700;
+}
+
+.transactions .transaction-status {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.transactions .completed {
+    color: #03543F;
+    background-color: #DEF7EC;
+}
+
+.transactions .cancelled {
+    color: #9B1C1C;
+    background-color: #FDE8E8;
+
+}
+
+.transactions .in-progress {
+    color: #5521B5;
+    background-color: #EDEBFE;
+}
