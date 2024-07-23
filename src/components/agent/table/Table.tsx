@@ -1,5 +1,5 @@
 import React from "react";
-import {Agent} from "../../../agent/agent.types";
+import {Agent} from "../../../types/agent.types";
 import {Row} from "./Row";
 
 type Props = {

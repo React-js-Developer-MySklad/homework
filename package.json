@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest src",
     "build": "webpack --config webpack.production.js",
-    "serve": "webpack serve --config webpack.development.js"
+    "serve": "webpack serve --config webpack.development.js",
+    "service-mock": "json-server -w ./__mocks__/data.json"
   },
   "author": "",
   "license": "ISC",

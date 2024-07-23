@@ -1,4 +1,4 @@
-import {Agent} from "../../../agent/agent.types";
+import {Agent} from "../../../types/agent.types";
 import {fireEvent, render} from "@testing-library/react";
 import {screen} from '@testing-library/dom'
 import {Table} from "./Table";
@@ -11,14 +11,14 @@ let mockOnDelete: jest.Mock
 
 beforeEach(() => {
     agent1 = {
-        id: 1,
+        id: "1",
         name: "name",
         address: "address",
         inn: "inn",
         kpp: "kpp",
     }
     agent2 = {
-        id: 2,
+        id: "2",
         name: "name2",
         address: "address2",
         inn: "inn2",

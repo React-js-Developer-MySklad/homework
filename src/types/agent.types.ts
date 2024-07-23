@@ -1,7 +1,7 @@
-export interface AgentApiService {
-    loadAll(): Promise<Agent[]>
-    save(agent: AgentData | Agent): Promise<Agent>
-    delete(agent: Agent): Promise<void>
+export type AgentContextType = {
+    agents: Agent[]
+    deleteAgent: (agent: Agent) => Promise<void>
+    saveAgent: (agent: Agent | AgentData) => Promise<void>
 }
 
 export type Agent = AgentData & Identifiable
@@ -14,5 +14,5 @@ export type AgentData = {
 }
 
 export type Identifiable = {
-    id: number
+    id: string
 }

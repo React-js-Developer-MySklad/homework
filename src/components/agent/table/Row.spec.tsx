@@ -1,7 +1,7 @@
 import {fireEvent, render} from "@testing-library/react"
 import {screen} from "@testing-library/dom"
 import {Row} from "./Row"
-import {Agent} from "../../../agent/agent.types"
+import {Agent} from "../../../types/agent.types"
 
 let agent: Agent
 let mockOnEdit: jest.Mock
@@ -9,7 +9,7 @@ let mockOnDelete: jest.Mock
 
 beforeEach(() => {
     agent = {
-        id: 1,
+        id: "1",
         name: "name",
         address: "address",
         inn: "inn",

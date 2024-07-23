@@ -1,35 +1,17 @@
-import React, {useEffect, useState} from "react"
-import {Agent, AgentApiService, AgentData} from "../../agent/agent.types"
+import React, {useState} from "react"
+import {Agent, AgentData} from "../../types/agent.types"
 import {Header} from "./header/Header"
 import {Footer} from "./footer/Footer"
 import AgentEditor from "../agent/editor"
 import AgentTable from "../agent/table"
+import {useAgentContext} from "../../hooks/useAgentContext";
 
-type Props = {
-    agentService: AgentApiService
-}
-
-const App: React.FC<Props> = ({agentService}) => {
-    const [agents, setAgents] = useState([] as Agent[])
+const App: React.FC = () => {
+    const { agents, deleteAgent, saveAgent } = useAgentContext()
     const [showModal, setShowModel] = useState({} as {agent?: Agent, show: boolean})
 
-    useEffect(() => {
-        agentService.loadAll().then(setAgents)
-    }, [])
-
-    const onDelete = (agent: Agent) => {
-        agentService.delete(agent)
-            .then(() => agentService.loadAll())
-            .then(setAgents)
-    }
-
-    const onSave = (agent: Agent | AgentData) => {
-        console.log("saving", agent)
-        agentService.save(agent)
-            .then(() => closeModal())
-            .then(() => agentService.loadAll())
-            .then(setAgents)
-    }
+    const onDelete = deleteAgent
+    const onSave = (agent: Agent | AgentData) => saveAgent(agent).then(() => closeModal())
 
     const showCreationModal = () => {
         setShowModel({agent: null, show: true})

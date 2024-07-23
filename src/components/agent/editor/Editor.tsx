@@ -1,6 +1,6 @@
 import React, {memo, useEffect, useRef, useState} from 'react'
 import {Modal as FlowbiteModal} from "flowbite"
-import {Agent, AgentData} from "../../../agent/agent.types";
+import {Agent, AgentData} from "../../../types/agent.types";
 
 type Props = {
     agent?: Agent
