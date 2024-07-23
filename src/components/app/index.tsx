@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useCallback, useState} from "react"
 import {Agent, AgentData} from "../../types/agent.types"
 import {Header} from "./header/Header"
 import {Footer} from "./footer/Footer"
@@ -10,20 +10,20 @@ const App: React.FC = () => {
     const { agents, deleteAgent, saveAgent } = useAgentContext()
     const [showModal, setShowModel] = useState({} as {agent?: Agent, show: boolean})
 
-    const onDelete = deleteAgent
-    const onSave = (agent: Agent | AgentData) => saveAgent(agent).then(() => closeModal())
+    const onDelete = useCallback(deleteAgent, [deleteAgent])
+    const onSave = useCallback((agent: Agent | AgentData) => saveAgent(agent).then(() => closeModal()), [saveAgent])
 
-    const showCreationModal = () => {
+    const showCreationModal = useCallback(() => {
         setShowModel({agent: null, show: true})
-    }
+    }, [])
 
-    const showEditModal = (agent: Agent) => {
+    const showEditModal = useCallback((agent: Agent) => {
         setShowModel({agent: agent, show: true})
-    }
+    }, [])
 
-    const closeModal = () => {
+    const closeModal = useCallback(() => {
         setShowModel({agent: null, show: false})
-    }
+    }, [])
 
     return (
         <>

@@ -7,7 +7,7 @@ type Props = {
     onDelete: () => void
 }
 
-export const Row: React.FC<Props> = ({agent, onEdit, onDelete}) => {
+const RowComponent: React.FC<Props> = ({agent, onEdit, onDelete}) => {
     return (
         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100" onDoubleClick={onEdit}>
             <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{agent.name}</th>
@@ -26,3 +26,5 @@ export const Row: React.FC<Props> = ({agent, onEdit, onDelete}) => {
         </tr>
     )
 }
+
+export const Row = React.memo(RowComponent)

@@ -1,13 +1,6 @@
 {
   "agent": [
     {
-      "id": "1",
-      "name": "3",
-      "address": "3",
-      "inn": "3",
-      "kpp": "3"
-    },
-    {
       "id": "2",
       "name": "2",
       "address": "2",
@@ -15,16 +8,30 @@
       "kpp": "2"
     },
     {
-      "id": "085e",
-      "name": "name",
+      "id": "0cfe",
+      "name": "2.7",
+      "address": "123",
+      "inn": "12345678901",
+      "kpp": "123456789"
+    },
+    {
+      "id": "146e",
+      "name": "Metrifant Queue - Alert",
       "address": "address",
       "inn": "12345678901",
       "kpp": "123456789"
     },
     {
-      "id": "0cfe",
-      "name": "2.7",
-      "address": "123",
+      "id": "ac6b",
+      "name": "Metrifant Queue - Alert",
+      "address": "address",
+      "inn": "12345678901",
+      "kpp": "123456789"
+    },
+    {
+      "id": "1aac",
+      "name": "Metrifant Queue - Alert",
+      "address": "Surgutskaya street, 118",
       "inn": "12345678901",
       "kpp": "123456789"
     }

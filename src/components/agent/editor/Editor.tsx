@@ -1,6 +1,7 @@
 import React, {memo, useEffect, useRef, useState} from 'react'
 import {Modal as FlowbiteModal} from "flowbite"
 import {Agent, AgentData} from "../../../types/agent.types";
+import {createPortal} from "react-dom";
 
 type Props = {
     agent?: Agent
@@ -35,7 +36,7 @@ export const Editor: React.FC<Props> = memo(({agent, show, onSave, onClose}) => 
         onSave(value);
     };
 
-    return (
+    return createPortal(
         <div ref={view} id="contragent-create-modal" tabIndex={-1} aria-hidden="true" className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
             <div className="relative p-4 w-full max-w-md max-h-full">
                 <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -75,5 +76,5 @@ export const Editor: React.FC<Props> = memo(({agent, show, onSave, onClose}) => 
                 </div>
             </div>
         </div>
-    )
+    , document.body)
 })
