@@ -1,0 +1,25 @@
+.container {
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    overflow: hidden;
+    padding: 20px 10px;
+}
+  
+header .logo {
+    float: left;
+}
+
+header .button {
+    float: right;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
